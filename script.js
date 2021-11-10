@@ -16,7 +16,7 @@ async function get()
         xhr.onprogress = () => {
             console.log(xhr.statusText);
         }
-        xhr.onload = () => {
+        xhr.onloadend = () => {
             if (xhr.status === 200) {
                 resolve(xhr);
             }
